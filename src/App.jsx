@@ -9,10 +9,8 @@ function App() {
     return stored ? JSON.parse(stored) : [];
   });
 
-  // ID of the todo currently being edited (null = none)
   const [editingId, setEditingId] = useState(null);
 
-  // Sorting: 'none' or 'priority'
   const [sortBy, setSortBy] = useState('none');
 
   useEffect(() => {
@@ -34,7 +32,7 @@ function App() {
     setTodos((prev) =>
       prev.map((todo) => (todo.id === id ? { ...todo, ...updatedFields } : todo))
     );
-    // close edit mode after update
+    
     setEditingId(null);
   };
 
@@ -49,10 +47,9 @@ function App() {
     );
   };
 
-  // Derived sorted list (do not mutate original)
   const getSortedTodos = () => {
     if (sortBy === 'priority') {
-      // priority values are strings '1','2','3' where 1 = high
+
       return [...todos].sort((a, b) => Number(a.priority) - Number(b.priority));
     }
     return todos;
