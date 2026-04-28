@@ -1,6 +1,4 @@
-/* =========================================
-   Root Variables
-========================================= */
+/* Root Variables*/
 :root {
   --bg-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
   --panel-bg: #ffffff;
@@ -27,9 +25,7 @@
   --danger: #dc2626;
 }
 
-/* =========================================
-   Dark Mode
-========================================= */
+/* Dark Mode*/
 body.dark-mode {
   background: var(--dark-bg) !important;
   color: var(--dark-panel-text);
@@ -57,9 +53,7 @@ body.dark-mode .todo-actions button {
   color: #58a6ff;
 }
 
-/* =========================================
-   App Layout
-========================================= */
+/* App Layout */
 .app {
   min-height: 100vh;
   background: var(--bg-gradient);
@@ -129,9 +123,7 @@ body.dark-mode .sort-select {
   cursor: pointer;
 }
 
-/* =========================================
-   Grid Layout
-========================================= */
+/* Layout */
 .app-main {
   display: grid;
   grid-template-columns: 380px minmax(360px, 1fr);
@@ -149,9 +141,7 @@ body.dark-mode .sort-select {
   }
 }
 
-/* =========================================
-   Panels
-========================================= */
+/* Panels */
 .panel {
   background: var(--panel-bg);
   color: var(--panel-text);
@@ -167,9 +157,7 @@ body.dark-mode .sort-select {
   gap: 12px;
 }
 
-/* =========================================
-   Panel Headers (Unified Blue Gradient)
-========================================= */
+/* Panel Headers */
 .panel .panel-header {
   background: linear-gradient(90deg, rgba(30,144,255,0.12), rgba(30,144,255,0.06));
   padding: 12px 16px;
@@ -197,9 +185,7 @@ body.dark-mode .panel .panel-header h2 {
   color: #ffffff !important;
 }
 
-/* =========================================
-   Form Elements
-========================================= */
+/* Form Elements */
 form .form-group {
   display: flex;
   flex-direction: column;
@@ -232,9 +218,7 @@ body.dark-mode select {
   border-color: #30363d !important;
 }
 
-/* =========================================
-   Add Button
-========================================= */
+/* Add Button */
 .btn-add {
   background-color: #28a745;
   border: none;
@@ -257,9 +241,7 @@ body.dark-mode select {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
 }
 
-/* =========================================
-   Todo List + Items
-========================================= */
+/* Todo List */
 .todo-list {
   display: flex;
   flex-direction: column;
@@ -346,9 +328,7 @@ body.dark-mode .todo-actions button {
   color: #1e3a8a;
 }
 
-/* =========================================
-   Full-Width Edit Mode (Layout A)
-========================================= */
+/* Full Width Layout */
 
 /* Make the todo card full-width when editing */
 .todo-item.editing {
@@ -364,7 +344,7 @@ body.dark-mode .todo-actions button {
   width: 100%;
 }
 
-/* Description + priority stacked vertically */
+/* Description and priority stacked vertically */
 .todo-edit-row {
   display: flex;
   flex-direction: column;
@@ -386,7 +366,7 @@ body.dark-mode .todo-actions button {
   box-sizing: border-box;
 }
 
-/* Save + Cancel aligned right */
+/* Save and Cancel aligned right */
 .edit-actions {
   display: flex;
   justify-content: flex-end;
@@ -432,9 +412,7 @@ body.dark-mode .edit-actions .cancel-btn {
   color: #e6edf3;
 }
 
-/* =========================================
-   Select Arrow + Appearance Fixes
-========================================= */
+/* Select Arrow Fix */
 
 /* Restore native select arrow */
 select,
@@ -457,7 +435,7 @@ body.dark-mode .sort-select {
   border-color: #30363d;
 }
 
-/* Option text colors */
+/* Option text colors for readability */
 select option,
 .sort-select option {
   color: #111;
@@ -470,9 +448,7 @@ body.dark-mode .sort-select option {
   background: #0d1117;
 }
 
-/* =========================================
-   Priority Card Text Clarity
-========================================= */
+/* Priority Card */
 .priority-high .todo-text,
 .priority-medium .todo-text,
 .priority-low .todo-text {
@@ -485,17 +461,13 @@ body.dark-mode .priority-low .todo-text {
   color: #e6edf3 !important;
 }
 
-/* =========================================
-   Accessibility Focus Styles
-========================================= */
+/* Focus Styles */
 :focus {
   outline: 3px solid rgba(30, 144, 255, 0.18);
   outline-offset: 3px;
 }
 
-/* =========================================
-   Responsive Adjustments
-========================================= */
+/* Adjustments */
 @media (max-width: 720px) {
   .todo-edit-priority select {
     width: 100%;
@@ -523,9 +495,7 @@ body.dark-mode .priority-low .todo-text {
   }
 }
 
-/* =========================================
-   Animation
-========================================= */
+/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -537,9 +507,7 @@ body.dark-mode .priority-low .todo-text {
   }
 }
 
-/* =========================================
-   Final Polish + Structural Consistency
-========================================= */
+/* Fixed Structural Issues */
 
 /* Ensure todo description text is readable in dark mode */
 body.dark-mode .todo-item .todo-text {
